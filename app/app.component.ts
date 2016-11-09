@@ -1,21 +1,20 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
+
+import {Calculator} from './shared/calculator/calculator'
 
 @Component({
     selector: "my-app",
-    templateUrl: "app.component.html",
+    templateUrl: 'app.component.html'
 })
-export class AppComponent {
-    public counter: number = 16;
 
-    public get message(): string {
-        if (this.counter > 0) {
-            return this.counter + " taps left";
-        } else {
-            return "Hoorraaay! \nYou are ready to start building!";
-        }
+export class AppComponent {
+    calculator: Calculator;
+
+    constructor() {
+        this.calculator = new Calculator();
     }
-    
-    public onTap() {
-        this.counter--;
+
+    calculateL() {
+        alert("You’re using: " + this.calculator.fuel);
     }
 }

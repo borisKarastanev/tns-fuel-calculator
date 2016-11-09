@@ -1,7 +1,11 @@
 <StackLayout>
-    <Label text="Tap the button" class="title"></Label>
-    
-    <Button text="TAP" (tap)="onTap()"></Button>
+    <Label text="Fuel Calculator" class="title"></Label>
 
-    <Label [text]="message" class="message" textWrap="true"></Label>
+    <TextField #usedFuel hint="Enter used fuel" keyboardType="number" [(ngModel)]="calculator.fuel"></TextField>
+
+    <TextField #traveledDistance hint="Enter traveled distance" keyboardType="number"></TextField>
+    
+    <Button text="Calculate" (tap)="calculateL()" class="calc-btn"></Button>
+
+    <Button text="Clear" (tap)="clearInput()" class="clear-btn"></Button>
 </StackLayout>
