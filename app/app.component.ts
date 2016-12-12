@@ -24,7 +24,9 @@ export class AppComponent {
     }
 
     clearResult() {
-        this.calculator.result = 0;
+        this.calculator.result = null;
+        this.calculator.fuel = null;
+        this.calculator.distance = null;
     }
 
 }
