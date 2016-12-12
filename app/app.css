@@ -3,7 +3,7 @@
 }
 
 button {
-    font-size: 36;
+    font-size: 22;
 }
 
 .title {
@@ -16,4 +16,22 @@ button {
     color: #284848;
     text-align: center;
     margin: 0 20;
-} 
+}
+
+StackLayout {
+    margin-left: 30;
+    margin-right: 30;
+    padding-bottom: 15;
+    background-color: white;
+}
+
+Button, TextField {
+    margin-left: 16;
+    margin-right: 16;
+    margin-bottom: 20;
+}
+
+.result-box {
+    background-color: #bccd95;
+    color: #212121;
+}

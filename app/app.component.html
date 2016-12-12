@@ -1,7 +1,7 @@
 <StackLayout>
     <Label text="Fuel Calculator" class="title"></Label>
 
-    <TextField #resultField hint="Result..." keyboardType="number" isEnabled="false" [text]="calculator.result"></TextField>
+    <TextField #resultField class="result-box" keyboardType="number" isEnabled="false" [text]="calculator.result"></TextField>
 
     <TextField #usedFuel hint="Enter used fuel" keyboardType="number" [(ngModel)]="calculator.fuel"></TextField>
 
