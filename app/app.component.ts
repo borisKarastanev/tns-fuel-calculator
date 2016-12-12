@@ -1,5 +1,6 @@
-import {Component, ElementRef, ViewChild} from "@angular/core";
+import {Component, ElementRef, ViewChild, OnInit} from "@angular/core";
 import {Calculator} from './shared/calculator/calculator';
+import { Page } from "ui/page";
 
 @Component({
     selector: "my-app",
@@ -7,11 +8,15 @@ import {Calculator} from './shared/calculator/calculator';
     styleUrls: ['app.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
+    ngOnInit() {
+        this.page.actionBarHidden = true;
+    }
+
     calculator: Calculator;
     @ViewChild('resultField') resultField: ElementRef;
 
-    constructor() {
+    constructor(private page: Page) {
         this.calculator = new Calculator();
     }
 
